@@ -1,6 +1,6 @@
 # Kafka Producer and Consumer Examples
 
-This repository contains examples of Kafka producers and consumers implemented in Python. It also includes a docker-compose configuration to set up a Kafka cluster with three brokers for local development and testing.
+This repository contains examples of Kafka producers and consumers implemented in Python. The producer reads city data from a JSON file and sends it to Kafka, while the consumer reads the data from Kafka. It also includes a docker-compose configuration to set up a Kafka cluster with three brokers for local development and testing.
 
 ## Prerequisites
 
@@ -41,14 +41,12 @@ To start consumer and producer, run the following command in the directory:
 
 ```
 python3 consumers/simple_consumer.py
-
 ```
 
 and in a new terminal
 
 ```
 python3 producers/simple_producer.py
-
 ```
 
 ## Contributing
