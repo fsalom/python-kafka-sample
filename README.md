@@ -2,16 +2,23 @@
 
 This repository contains examples of Kafka producers and consumers implemented in Python. The producer reads city data from a JSON file and sends it to Kafka, while the consumer reads the data from Kafka. It also includes a docker-compose configuration to set up a Kafka cluster with three brokers for local development and testing.
 
+---
 ## Prerequisites
 
 - Docker and Docker Compose installed on your machine.
 - Python 3.x installed on your machine.
-
+---
 ## Setting Up the Python Environment
 
 ### Installing Poetry
 
-If you don't have Poetry installed, you can install it by following the instructions on the Poetry website.
+If you don't have Poetry installed, you can install it by following the instructions on the Poetry website https://python-poetry.org/ .
+
+With brew:
+
+```
+brew install poetry
+```
 
 Alternatively, you can install it using the following command:
 
@@ -26,7 +33,7 @@ To set up the Python environment and install the dependencies, follow these step
 ```
 poetry install
 ```
-
+---
 ## Start the Cluster
 
 To start the Kafka cluster, run the following command in the directory containing the docker-compose.yml file:
@@ -35,20 +42,36 @@ To start the Kafka cluster, run the following command in the directory containin
 docker-compose up -d
 ```
 
+## Choose consumer and producer
+
+This project contains 3 types of consumers and 2 types of producers
+
+### Consumers
+
+- simple consumer
+- simple subscriber
+- multiple consumers
+
+### Producers
+
+- simple producer
+- simple producer with threads
+
+
 ## Run consumer and producer
 
-To start consumer and producer, run the following command in the directory:
+To start consumer and a producer, run the following command in the directory:
 
 ```
 python3 consumers/simple_consumer.py
 ```
 
-and in a new terminal
+and in a new terminal:
 
 ```
 python3 producers/simple_producer.py
 ```
-
+---
 ## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request for any changes.
